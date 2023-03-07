@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class DB연결테스트 {
+public class DB연결테스트3_delete {
 
 	public static void main(String[] args) {
 		try {
@@ -27,7 +27,7 @@ public class DB연결테스트 {
 			//SQL부품으로 만들어주어야 한다.
 			//PreparedStatement 가 SQL부품!!
 			
-			String sql = "insert into hr.MEMBER values ('win3','win3','win3','win3')";
+			String sql = "delete from hr.MEMBER where id = 'win3'";
 			PreparedStatement ps = con.prepareStatement(sql); 
 			// con부품으로 sql스트링에 있는것을 SQL부품으로 만들어주기
 			System.out.println("3. SQL문 부품(객체)으로 만들어기 성공");

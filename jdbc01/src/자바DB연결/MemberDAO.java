@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
-public class DB연결테스트 {
+public class MemberDAO {
 
-	public static void main(String[] args) {
+	public void insert() {
+		
 		try {
 			// 1.오라클 11g와 연결할 부품 설정
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -27,7 +28,7 @@ public class DB연결테스트 {
 			//SQL부품으로 만들어주어야 한다.
 			//PreparedStatement 가 SQL부품!!
 			
-			String sql = "insert into hr.MEMBER values ('win3','win3','win3','win3')";
+			String sql = "insert into hr.MEMBER values ('win7','win7','win7','win7')";
 			PreparedStatement ps = con.prepareStatement(sql); 
 			// con부품으로 sql스트링에 있는것을 SQL부품으로 만들어주기
 			System.out.println("3. SQL문 부품(객체)으로 만들어기 성공");
